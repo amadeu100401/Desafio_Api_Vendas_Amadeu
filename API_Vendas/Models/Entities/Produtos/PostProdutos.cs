@@ -1,12 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace API_Vendas.Models
+namespace API_Vendas.Models.Entities.Produtos
 {
-    public class EstoqueProdutos
+    public class PostProdutos
     {
-        [Key]
-        public int Id { get; set; }
-        [Required, MaxLength(120)]
+        [Required]
         public string Nome { get; set; }
         [Required]
         public double Valor_unitario { get; set; }

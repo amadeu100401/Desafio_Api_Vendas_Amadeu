@@ -11,6 +11,6 @@ namespace API_Vendas.Models
             base.OnModelCreating(builder);
         }
 
-        public DbSet<EstoqueProdutos> Estoque { get; set; }
+        public DbSet<Produtos> Estoque { get; set; }
     }
 }
