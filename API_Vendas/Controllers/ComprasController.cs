@@ -18,9 +18,9 @@ namespace API_Vendas.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody]PostCompras compra)
+        public IActionResult PostCompra([FromBody]PostCompras compra)
         {
-            if (compra.IsValid(compra.cartao.numero,compra.cartao.cvv))
+            if (compra.cartao.IsValid(compra.cartao.numero,compra.cartao.cvv))
             {
                 if (repository.Comprar(compra))
                     return Ok("Venda realizada com sucesso");
