@@ -20,7 +20,7 @@ namespace API_Vendas.Repositories
             dataBase = _dataBase;
         }
 
-        #region Metodo POST
+        #region Metodos POST
         public int Create(PostProdutos produtos)
         {
             try

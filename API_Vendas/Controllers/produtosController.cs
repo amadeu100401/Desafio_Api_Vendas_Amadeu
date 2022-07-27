@@ -7,14 +7,15 @@ namespace API_Vendas.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class produtosController : ControllerBase
+    public class ProdutosController : ControllerBase
     {
         private readonly IProdutosRepository repository;
-        public produtosController(IProdutosRepository _repository)
+        public ProdutosController(IProdutosRepository _repository)
         {
             repository = _repository;
         }
 
+        #region Endpoint POST
         [HttpPost]
         public IActionResult Post([FromBody] PostProdutos produtos)
         {
@@ -28,7 +29,9 @@ namespace API_Vendas.Controllers
             }
             return BadRequest("Ocorreu um erro desconhecido");
         }
+        #endregion
 
+        #region Endpoints GET
         [HttpGet]
         public IActionResult GetProdutos()
         {
@@ -49,13 +52,9 @@ namespace API_Vendas.Controllers
                 return BadRequest("Ocorreu um erro desconhecido");
             }
         }
+        #endregion
 
-        [HttpPut]
-        public IActionResult Put()
-        {
-            return Ok();
-        }
-
+        #region Endpoint DELETE
         [HttpDelete("{Id}")]
         public IActionResult Delete([FromRoute]ProdutoId produto)
         {
@@ -69,6 +68,7 @@ namespace API_Vendas.Controllers
                 return BadRequest("Ocorreu um erro desconhecido");
             }
         }
+        #endregion
 
     }
 }

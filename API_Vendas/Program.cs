@@ -14,6 +14,7 @@ builder.Services.AddDbContext<_DbContext>(x => x.UseMySql(
     ));
 
 builder.Services.AddScoped<IProdutosRepository,ProdutosRepository>();
+builder.Services.AddScoped<IComprasRepository,ComprasRepository>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
