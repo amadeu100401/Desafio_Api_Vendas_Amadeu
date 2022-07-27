@@ -7,7 +7,7 @@
         1. nome - O nome do produto - Tipo: String - Parâmetro obrigatório
         2. valor_unitario - O valor de cada unidade deste produto - Tipo: ponto flutuante - Parâmetro obrigatório e deve ser diferente de 0
         3. qtde_estoque - A quantidade de unidades em estoque - Tipo: inteiro - Parâmetro obrigatório
-        * O endpoint receberá esses parâmetros através do corpo (body) da requisição:
+        * O endpoint receberá esses parâmetros através do corpo (body - json) da requisição:
     * Formato resposta
       - Caso o cadastro tenha sido feito com sucesso, haverá uma resposta do tipo Ok com a menssagem: "Produto cadastrado"
       - Caso oos valores informados sejam inválidos, será retornado uma reposta do tipo Badrequest com a menssagem: "os valores informados são inválidos"
@@ -45,7 +45,7 @@
           * data_expedicao - Data de validade do cartão - Tipo: string - Parâmetro obrigatório 
           * bandeira - Bandeira do cartão - Tipo: string - Parâmetro obrigatório
           * cvv - Numero cvv do cartão - Tipo: string - Parâmetro obrigatório e deve ter uma quantiade de caractéries igual a 3
-        * O endpoint receberá esses parâmetros através do corpo (body) da requisição:
+        * O endpoint receberá esses parâmetros através do corpo (body - json) da requisição:
     * Formato resposta
       - Caso a venda tenha sido feita com sucesso, haverá uma resposta do tipo Ok com a menssagem: "Venda realizada com sucesso"
       - Caso oos valores informados sejam inválidos, será retornado uma reposta do tipo Badrequest com a menssagem: "os valores informados são inválidos"
@@ -63,7 +63,7 @@
           * data_expedicao - Data de validade do cartão - Tipo: string - Parâmetro obrigatório 
           * bandeira - Bandeira do cartão - Tipo: string - Parâmetro obrigatório
           * cvv - Numero cvv do cartão - Tipo: string - Parâmetro obrigatório e deve ter uma quantiade de caractéries igual a 3
-        * O endpoint receberá esses parâmetros através do corpo (body) da requisição:
+        * O endpoint receberá esses parâmetros através do corpo (body - json) da requisição:
     * Formato resposta
       - Caso a venda tenha sido feita com sucesso, retornará um objeto com o valor da venda e o status de APROVADO
       - Caso oos valores informados sejam inválidos ou o valor da venda seja menor ou igual a 100, será retornado um objeto com o valor da venda e o status de REPROVADO
