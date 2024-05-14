@@ -1,4 +1,4 @@
-# Documentação das APIs.
+# Documentação da API.
 ## Produtos
 * Fornecer as funções de cadastro, litagem e exclusão de produto no banco de dados referente ao estoque.
 ### Endpoints
